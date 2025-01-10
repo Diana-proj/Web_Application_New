@@ -1,0 +1,48 @@
+.ModuleListContainer {
+    padding: 20px;
+    width: 97.5%; /* Take full width of parent container */
+    max-height: 80vh; /* Use up to 80% of vertical space */
+    overflow-y: auto; /* Enable scroll for overflow */
+    text-align: left;
+  }
+  
+  .ModuleList ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .ModuleList li {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ModuleList h2 {
+    margin: 0 0 10px 0;
+    color: black;
+  }
+  
+  .ModuleList p {
+    margin: 5px 0;
+    color: #333;
+  }
+  .view-details-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color:rgb(201, 133, 8) ;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.view-details-button:hover {
+    background-color: white;
+}
+  

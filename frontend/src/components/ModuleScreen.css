@@ -1,0 +1,306 @@
+/* App.css */
+.module-container {
+  padding: 25px;
+}
+
+.ModuleListContainer {
+    padding: 20px;
+    max-height: 70vh; /* Prevents the module list from taking over the screen */
+    overflow-y: auto; /* Adds scrolling if the list is too long */
+    text-align: left; /* Aligns the content to the right */
+}
+
+.ModuleList ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.ModuleList li {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ModuleList h2 {
+    margin: 0 0 10px 0;
+    color: black; /* Sets the title color to black */
+}
+
+.ModuleList p {
+    margin: 5px 0;
+    color: #333;
+}
+
+/* New styles for alignment using table layout */
+.MetricsTable {
+    display: table; /* Makes the container behave like a table */
+    width: 100%; /* Ensures it takes the full width */
+    border-collapse: collapse; /* Optional: Prevents extra spacing between rows */
+    text-align: left; /* Aligns all content to the left */
+}
+
+.MetricsTableRow {
+    display: table-row; /* Makes this element behave like a row */
+}
+
+.MetricsTableRow div {
+    display: table-cell; /* Makes these elements behave like table cells */
+    padding: 5px 10px; /* Adds spacing inside the cells */
+    border-right: 1px solid #ccc; /* Adds a vertical divider between columns */
+}
+
+.MetricsTableRow div:last-child {
+    border-right: none; /* Removes the border for the last cell */
+}
+
+/* Optional: Styling for labels and values */
+.MetricsLabel {
+    font-weight: bold; /* Bold titles like "Workload" */
+}
+
+.overall-rating {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.rating-section {
+  display: flex;
+  justify-content: space-between; /* Ensures equal spacing */
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.review-btn {
+  background-color: #1a73e8; /* Vibrant blue */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease; /* Smooth hover effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds depth */
+}
+
+.review-btn:hover {
+  background-color: #f5ba42; /* Golden yellow on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+
+.rating-box {
+  flex: 1; /* Ensure equal width for all metrics */
+  padding: 10px;
+  border-radius: 8px;
+  margin: 0 10px; /* Spacing between boxes */
+}
+
+/* Review popup styling */
+.review-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%; 
+    max-width: 500px; 
+    min-width: 280px; 
+    background-color: #2c2c2c; 
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    z-index: 1000;
+    overflow-y: auto;
+    max-height: 75vh; /* To ensure scrolling for large content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff; /* Text color for dark background */
+  }
+  
+  /* Fixed size textarea with scrolling */
+  textarea {
+    width: 100%;
+    height: 120px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    resize: none; /* Prevents resizing */
+    overflow-y: auto; /* Enables vertical scrolling inside the textarea */
+    color: #ffffff;
+    background-color: #333333; /* Dark gray background for textarea */
+  }
+  
+  textarea::placeholder {
+    color: #aaaaaa;
+  }
+  
+  /* Star rating */
+  .parameter-section {
+    margin-bottom: 15px;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .parameter-section label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #ffffff;
+  }
+  
+  .stars-container {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .star {
+    font-size: 24px;
+    color: #555555;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .star.filled {
+    color: #ffcc00;
+  }
+  
+  .star:hover {
+    color: #ffcc33;
+  }
+  
+  /* Buttons in the corners */
+  .form-actions {
+    display: flex;
+    justify-content: space-between; /* Pushes buttons to the edges */
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+  .submit-btn,
+  .cancel-btn {
+    width: 48%; /* Ensures equal-sized buttons */
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submit-btn {
+    background-color: #1a73e8; /* Professional blue */
+    color: white;
+  }
+  
+  .submit-btn:hover {
+    background-color: #1558b3; /* Darker blue on hover */
+  }
+  
+  .cancel-btn {
+    background-color: #d93025; /* Professional red */
+    color: white;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #a61914; /* Darker red on hover */
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .review-popup {
+      width: 85%; /* Adjusts width for smaller screens */
+      padding: 15px;
+    }
+  
+    .submit-btn,
+    .cancel-btn {
+      font-size: 12px;
+    }
+  }
+
+  /* Chatbot Icon Styling */
+.chatbox-link {
+  position: fixed; /* Ensure it stays fixed on the screen */
+  bottom: 20px; /* Adjust spacing from the bottom of the viewport */
+  right: 20px; /* Adjust spacing from the left of the viewport */
+  z-index: 1000; /* Ensure it stays on top of other elements */
+  cursor: pointer; /* Show pointer on hover */
+  display: flex; /* Allows centering the icon */
+  align-items: center; /* Vertically center the icon */
+  justify-content: center; /* Horizontally center the icon */
+}
+
+.chatbox-link img {
+  width: 60px; /* Set icon width */
+  height: 60px; /* Set icon height */
+  border-radius: 50%; /* Make the icon circular */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.chatbox-link img:hover {
+  transform: scale(1.1);
+}
+
+.reviews-section {
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #2c2c2c; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+  color: #ffffff; 
+  max-width: 800px; 
+  width: 90%; 
+  text-align: center; 
+}
+
+.reviews-section h2 {
+  font-size: 20px;
+  margin-bottom: 20px; 
+  color: #ffffff; 
+  text-align: center; 
+}
+
+.reviews-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 10px 0; 
+}
+
+.review-item {
+  margin: 15px auto; 
+  padding: 15px;
+  background-color: #333333; 
+  border-radius: 8px;
+  border: 1px solid #444; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  color: #e0e0e0;
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 90%; 
+  word-wrap: break-word; /* Prevents text overflow */
+  overflow-wrap: break-word; /* Break long words to fit the box */
+  text-align: left; 
+}
+
+/* Media Query for Larger Screens */
+@media (min-width: 1024px) {
+  .review-item {
+    max-width: 80%; 
+  }
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .review-item {
+    max-width: 95%; 
+    padding: 10px; 
+    font-size: 13px; 
+  }
+}

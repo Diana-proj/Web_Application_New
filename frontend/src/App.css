@@ -1,0 +1,64 @@
+
+
+.App {
+  position: relative; /* Enables positioning of children */
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  background-color: #172155;
+  border: 20px solid rgb(201, 133, 8);
+  box-sizing: border-box; /* Ensures padding and border are included in dimensions */
+  text-align: center;
+  overflow: hidden;
+}
+
+.Title {
+  font-size: 3rem;
+  margin: 20px 0;
+  color: white;
+}
+
+.logo img{
+  max-width: 10%;  /* Adjust the percentage to control the size */
+  height: auto;    /* Maintain aspect ratio */
+  display: block;  /* Remove inline behavior */
+  margin: 0 auto;  /* Center the image horizontally */
+}
+.Description1, .Description2 {
+  font-size: 1.2rem;
+  color: #ece7e7;
+  margin: 0 0 20px 0;
+}
+.custom-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: orange; /* Orange background */
+  color: white; /* Text color */
+  text-decoration: none; /* Remove underline */
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+  transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.custom-button:hover {
+  background-color: #ff9933; /* Darker orange on hover */
+  color: black; /* Change text color on hover */
+  transform: scale(1.05); /* Slightly increase size on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+}
+
+/* Center content within App */
+.ContentWrapper {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust centering based on element dimensions */
+  width: 80%; /* Occupy 80% of the page width */
+  max-height: 90%; /* Occupy up to 90% of the page height */
+  overflow-y: auto; /* Add scroll for tall content */
+  background-color: white;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
